@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.container-main {
+    width: 1280px; 
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #5a5a5a96;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.logo img {
+    width: 90px;
+    height: 45px;
+    margin-bottom: 5px;
+}
+
+.logo a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-family: 'Audiowide', cursive;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    display: block;
+    text-align: center;
+}
+
+
+.nav-links { 
+    text-align: center;
+    display: flex;
+    gap: 80px;
+    position: relative;
+}
+
+
+.nav-links a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    height: 2px;
+    bottom: 0; 
+    left: 0 ;
+    background-color: #4693e6ea;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.nav-links a {
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0px 0px 6px 0px;
+    position: relative; 
+    transition: color 0.3s;
+    letter-spacing: 2px;    
+}
+.nav-links a:hover {
+    color: #4693e6ea;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.search-container input[type="search"] {
+    padding: 10px;
+    border: 1px solid #b1b1b1b2;
+    font-size: 14px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    outline: none;
+    width: 200px;
+    font-weight: 500;
+    transition: border-color 0.3s;
+}
+
+.search-container #icon-btn{
+    width: 50px;
+    height: 36px;
+    background-color: #4693e6ea;
+    outline: none;
+    border: 1px solid #4693e6ea;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+
+.search-container #icon-btn i{
+    color: white;
+    font-size: 18px;
+    
+
+}
+.search-container input[type="search"]:focus, #icon-btn {
+    border-color: #4693e6ea;
+    box-shadow: 0, 0, 0, 5px rgba(0, 0, 0, 0.1) ;
+}
